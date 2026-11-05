@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#FFF7FA">
+<meta name="description" content="Hopebeauty · identidad visual Playful Beauty: paleta, tipografía, sistema gráfico, Instagram, contenidos, campañas y web.">
+<title>Hopebeauty · Playful Beauty — Identidad visual</title>
+<style>
+/* Tipografías locales (SIL Open Font License 1.1, ver assets/fonts/OFL-*.txt) */
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:300 700;font-display:swap;src:url('assets/fonts/spacegrotesk-latin.woff2') format('woff2')}
+@font-face{font-family:'Caveat';font-style:normal;font-weight:400 700;font-display:swap;src:url('assets/fonts/caveat-latin.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:300 800;font-display:swap;src:url('assets/fonts/inter-latin.woff2') format('woff2')}
+/* Paleta de marca (sin cambios) + variantes de accesibilidad para texto */
+:root{--paper:#FFF7FA;--ink:#221722;--muted:#6C636A;--acc:#FF4FA3;--pink:#FBDCE9;--ivory:#FAF3EE;--fuc:#E635A0;--blue:#2F5BFF;--lila:#CDB9EA;--peach:#FFDAC4;--ash:#EDE7EA;--gold:#D8B25C;
+--acc-text:#B03770;/* rosa profundo: texto rosa sobre fondos claros (AA) */--fuc-deep:#D43193;/* fucsia para fondos con texto blanco pequeño (AA) */}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,'Segoe UI',Arial,sans-serif;background:var(--paper);color:var(--ink)}
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:22px;padding:12px 5vw;background:rgba(255,247,250,.95);border-bottom:1px solid rgba(34,23,34,.08)}
+.brand{font-family:'Space Grotesk',Arial,sans-serif;font-weight:700;font-size:18px;color:var(--ink);text-decoration:none;white-space:nowrap}.brand span{color:var(--acc-text)}
+.top nav{display:flex;gap:16px;overflow-x:auto;min-width:0;scrollbar-width:none;font-size:12px}.top nav::-webkit-scrollbar{display:none}
+.top nav a{color:var(--muted);text-decoration:none;white-space:nowrap;padding:4px 0;border-bottom:2px solid transparent}
+.top nav a:hover,.top nav a:focus-visible{color:var(--acc-text);border-color:var(--acc);outline:none}
+.s{min-height:100vh;padding:64px 7vw 72px;border-bottom:1px solid rgba(0,0,0,.06);display:flex;flex-direction:column;gap:26px;scroll-margin-top:52px}
+.hd{display:flex;justify-content:space-between;border-top:2px solid var(--ink);padding-top:14px;font-size:11px;letter-spacing:.3em;text-transform:uppercase}
+.hd b{color:var(--acc-text)}
+h1,h2{font-family:'Space Grotesk',Arial,sans-serif;line-height:1.04;letter-spacing:-.02em}
+h2{font-size:clamp(28px,4vw,52px)}h1{font-size:clamp(44px,8vw,100px);margin-top:22px}
+.lead{font-size:15px;line-height:1.7;max-width:62ch}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:850px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.c{background:#fff;border:1px solid rgba(0,0,0,.07);border-radius:16px;padding:20px;min-width:0}
+.c p.m,.m{font-size:12px;color:var(--muted)}
+.lb{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.tag{display:inline-block;align-self:flex-start;font-size:10px;letter-spacing:.22em;text-transform:uppercase;padding:6px 14px;border-radius:999px;background:var(--acc);color:var(--ink);font-weight:600}
+.phimg{aspect-ratio:4/3;border-radius:12px;display:flex;align-items:flex-end;padding:12px;background-color:var(--pink);background-image:radial-gradient(var(--acc) 2px,transparent 2.5px),radial-gradient(var(--blue) 1.5px,transparent 2px);background-size:46px 46px,46px 46px;background-position:0 0,23px 23px}
+.phimg span{background:rgba(255,255,255,.94);border-radius:8px;padding:6px 10px;font-size:11px;font-weight:600;color:var(--ink)}
+.mb{width:100%;height:auto;display:block;border-radius:12px}
+.pc{border-radius:12px;aspect-ratio:1/1.05;padding:10px;display:flex;align-items:flex-end;font-size:10.5px;line-height:1.4;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+.pc>div{background:rgba(255,255,255,.94);color:var(--ink);border-radius:8px;padding:7px 9px;width:100%}
+.pc b{font-family:'Space Grotesk',Arial,sans-serif;font-size:12px;display:block}.pc code{font-size:10px}
+.pgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}@media(max-width:850px){.pgrid{grid-template-columns:repeat(2,1fr)}}
+.post{aspect-ratio:4/5;border-radius:10px;padding:12px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;position:relative;min-width:0}
+.ph{aspect-ratio:4/5;border-radius:10px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;min-width:0}
+.ph .ov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.62) 0%,rgba(0,0,0,.48) 48%,transparent 78%)}
+.ph .t{position:relative;color:#fff;font-family:'Space Grotesk',Arial,sans-serif;font-weight:700;font-size:17px;line-height:1.05;padding:12px;text-shadow:0 2px 10px rgba(0,0,0,.4)}
+.ph .sc{position:absolute;top:10px;right:12px;color:#fff;font-family:'Caveat',cursive;font-size:18px;transform:rotate(4deg);background:rgba(34,23,34,.6);padding:0 8px;border-radius:6px}
+.tt{font-weight:700;font-family:'Space Grotesk',Arial,sans-serif;line-height:1.05;font-size:18px}.ts{font-family:'Caveat',cursive;font-size:16px;margin-top:5px}.tk{font-size:10px;letter-spacing:.26em;text-transform:uppercase}
+.d{font-weight:700;font-family:'Space Grotesk',Arial,sans-serif;line-height:1.05}.sc2{font-family:'Caveat',cursive}
+.mono{font-family:'Space Grotesk',Arial,sans-serif;font-weight:700}
+.cover{justify-content:center;background:linear-gradient(135deg,var(--paper),#FBDCE955 55%,#2F5BFF14)}
+.end{justify-content:center;align-items:center;text-align:center;background:linear-gradient(160deg,var(--paper),#FF4FA322)}
+.story{width:150px;height:266px;border-radius:18px;padding:14px;display:flex;flex-direction:column;justify-content:space-between;flex-shrink:0}
+.reel{width:150px;aspect-ratio:9/16;border-radius:14px;padding:12px;display:flex;flex-direction:column;justify-content:flex-end;flex-shrink:0}
+.row{display:flex;gap:14px;overflow-x:auto;padding-bottom:8px}
+.row:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+.muro{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:620px;margin:0 auto;width:100%}
+.browser{border:2px solid var(--ink);border-radius:16px;overflow:hidden}
+.webhero{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;padding:24px 22px;align-items:center}
+.webcards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:0 22px 22px}
+.note{font-size:12px;color:var(--muted);text-align:center;max-width:66ch;margin:0 auto}
+@media(max-width:600px){.top{flex-wrap:wrap;gap:6px 14px}.top nav{width:100%}.s{min-height:auto;padding:48px 6vw 56px}
+.ph .t{font-size:12px;padding:8px}.ph .sc{font-size:13px;top:6px;right:8px}.post{padding:8px}.tt{font-size:12px}.ts{font-size:12px}.tk{font-size:8px;letter-spacing:.14em}.post .big{font-size:30px!important}
+.webhero,.webcards{grid-template-columns:1fr}.webnav{flex-wrap:wrap}}
+@media print{.top{display:none}.s{min-height:0;break-after:page}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style></head><body>
+<header class="top"><a class="brand" href="#h01">Hope<span>beauty</span></a>
+<nav aria-label="Secciones"><a href="#h03">Posicionamiento</a><a href="#h04">Moodboard</a><a href="#h05">Concepto</a><a href="#h06">Paleta</a><a href="#h07">Tipografía</a><a href="#h08">Firma</a><a href="#h09">Gráficos</a><a href="#h10">Fotografía</a><a href="#h11">Layout</a><a href="#h12">Perfil</a><a href="#h13">Muro</a><a href="#h15">Stories</a><a href="#h16">Contenidos</a><a href="#h17">Campañas</a><a href="#h20">Web</a><a href="#h21">Plataformas</a><a href="#h22">Manual</a><a href="#h23">Cierre</a></nav></header>
+<main>
+
+<!-- 01 PORTADA -->
+<section class="s cover" id="h01"><span class="tag">Identidad visual · Hopebeauty</span>
+<h1>Hope<br>beauty</h1>
+<svg width="180" height="14" viewBox="0 0 180 14" aria-hidden="true"><path d="M2 7Q15-2 28 7T54 7T80 7T106 7T132 7T158 7T178 7" fill="none" stroke="#FF4FA3" stroke-width="3" stroke-linecap="round"/></svg>
+<p class="sc2" style="font-size:clamp(24px,3vw,36px);color:var(--acc-text)">dulce · expresiva · con detalles divertidos</p>
+<p class="lead">Dirección creativa · Identidad · Instagram, web y plataformas<br><b>Opción A — Playful Beauty</b></p></section>
+
+<!-- 02 ÍNDICE -->
+<section class="s" id="h02"><div class="hd"><b>Contenido</b><span>02</span></div><h2>Qué vas a ver</h2>
+<div class="g2"><p class="lead">Una identidad completa y aplicada para una marca de belleza independiente: cada sección muestra el sistema funcionando.</p>
+<div class="c" style="font-size:14px;line-height:2"><a href="#h03">03 Posicionamiento</a> · <a href="#h04">04 Moodboard</a> · <a href="#h05">05 Concepto</a> · <a href="#h06">06 Paleta</a> · <a href="#h07">07 Tipografía</a> · <a href="#h08">08 Firma</a> · <a href="#h09">09 Gráficos</a> · <a href="#h10">10 Fotografía</a> · <a href="#h11">11 Layout</a> · <a href="#h12">12 Perfil</a> · <a href="#h13">13 Muro 3×3</a> · <a href="#h14">14 Desglose</a> · <a href="#h15">15 Stories · Reels · Carrusel</a> · <a href="#h16">16 Contenidos</a> · <a href="#h17">17–19 Campañas</a> · <a href="#h20">20 Web</a> · <a href="#h21">21 Plataformas</a> · <a href="#h22">22 Manual</a> · <a href="#h23">23 Cierre</a></div></div></section>
+
+<!-- 03 POSICIONAMIENTO -->
+<section class="s" id="h03"><div class="hd"><b>Estrategia</b><span>03</span></div><h2>Posicionamiento y personalidad</h2>
+<p class="lead"><b>Hopebeauty</b> (<b>@hopebeautyyy</b>) es una tienda y marca de belleza independiente con estándar editorial: skincare, K-beauty, rutinas, ingredientes, reseñas honestas y self-care, contados con un lenguaje cercano y divertido.<br><br><b>Promesa propuesta:</b> belleza que se ve bonita, se entiende fácil y sirve de verdad.</p>
+<div class="g4">
+<div class="c"><b>Cercana</b><p class="m">habla como una amiga informada</p></div>
+<div class="c"><b>Inteligente</b><p class="m">dato útil, cero relleno</p></div>
+<div class="c"><b>Femenina</b><p class="m">paleta y trazo con carácter</p></div>
+<div class="c"><b>Moderna</b><p class="m">K-beauty y tendencias de cuidado</p></div>
+<div class="c"><b>Aspiracional</b><p class="m">estética editorial y cuidada</p></div>
+<div class="c"><b>Práctica</b><p class="m">tips aplicables hoy</p></div>
+<div class="c"><b>Entretenida</b><p class="m">hooks con humor ligero</p></div>
+<div class="c"><b>Honesta</b><p class="m">reseñas sin humo</p></div></div></section>
+
+<!-- 04 MOODBOARD -->
+<section class="s" id="h04"><div class="hd"><b>Inspiración</b><span>04</span></div><h2>Moodboard de referencias</h2>
+<div class="g3">
+<div class="c"><svg class="mb" viewBox="0 0 400 300" role="img" aria-label="Dirección visual 01: color blocking con sellos"><rect width="400" height="300" fill="#FBDCE9"/><rect x="24" y="24" width="190" height="150" rx="14" fill="#E635A0"/><circle cx="300" cy="96" r="62" fill="#2F5BFF"/><rect x="230" y="186" width="146" height="90" rx="14" fill="#FF4FA3"/><rect x="24" y="190" width="190" height="86" rx="14" fill="#FFFFFF"/><circle cx="118" cy="233" r="30" fill="none" stroke="#E635A0" stroke-width="3" stroke-dasharray="6 5"/><text x="118" y="230" text-anchor="middle" font-family="Space Grotesk,Arial,sans-serif" font-size="9" font-weight="700" fill="#221722">100%</text><text x="118" y="242" text-anchor="middle" font-family="Space Grotesk,Arial,sans-serif" font-size="8" font-weight="700" fill="#221722">HONEST</text><text x="44" y="110" font-family="Space Grotesk,Arial,sans-serif" font-size="34" font-weight="700" fill="#FFFFFF">Glow</text><text x="246" y="240" font-family="Caveat,cursive" font-size="30" fill="#221722">playful</text><path d="M300 60l5 14 14 5-14 5-5 14-5-14-14-5 14-5z" fill="#FFFFFF"/></svg><p class="m" style="margin-top:8px"><b>Dirección 01:</b> color blocking audaz, fuentes amables, sellos divertidos, fotos con personalidad.</p></div>
+<div class="c"><svg class="mb" viewBox="0 0 400 300" role="img" aria-label="Dirección visual 02: layout de revista pastel con azul y fucsia"><rect width="400" height="300" fill="#FAF3EE"/><rect x="0" y="0" width="400" height="44" fill="#2F5BFF"/><text x="20" y="29" font-family="Space Grotesk,Arial,sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" letter-spacing="3">HOPEBEAUTY · Nº12</text><rect x="20" y="62" width="170" height="214" rx="10" fill="#CDB9EA"/><rect x="206" y="62" width="174" height="96" rx="10" fill="#E635A0"/><text x="220" y="118" font-family="Space Grotesk,Arial,sans-serif" font-size="26" font-weight="700" fill="#FFFFFF">K-beauty</text><rect x="206" y="172" width="80" height="104" rx="10" fill="#FBDCE9"/><rect x="300" y="172" width="80" height="104" rx="10" fill="#FFFFFF" stroke="#2F5BFF" stroke-width="2"/><rect x="80" y="120" width="50" height="120" rx="12" fill="#FFFFFF"/><rect x="92" y="100" width="26" height="24" rx="5" fill="#FF4FA3"/><rect x="226" y="200" width="40" height="60" rx="8" fill="#FF4FA3"/><rect x="236" y="188" width="20" height="14" rx="3" fill="#E635A0"/><text x="314" y="232" font-family="Caveat,cursive" font-size="24" fill="#2F5BFF">nuevo</text></svg><p class="m" style="margin-top:8px"><b>Dirección 02:</b> pasteles con azul eléctrico y fucsia, layouts de revista, empaques y wordmarks mixtos.</p></div>
+<div class="c"><svg class="mb" viewBox="0 0 400 300" role="img" aria-label="Dirección visual 03: ritual de skincare"><rect width="400" height="300" fill="#FFDAC4"/><ellipse cx="200" cy="250" rx="170" ry="26" fill="#FBDCE9"/><path d="M70 150h100l-12 92a14 14 0 0 1-14 12H96a14 14 0 0 1-14-12z" fill="#CDB9EA"/><path d="M170 172c26 0 26 40 0 40" fill="none" stroke="#CDB9EA" stroke-width="9"/><ellipse cx="120" cy="150" rx="50" ry="9" fill="#D8B25C"/><rect x="216" y="110" width="54" height="140" rx="14" fill="#FF4FA3"/><rect x="230" y="84" width="26" height="30" rx="6" fill="#E635A0"/><rect x="286" y="150" width="70" height="100" rx="18" fill="#FFFFFF"/><rect x="286" y="150" width="70" height="26" rx="10" fill="#2F5BFF"/><path transform="translate(330,60) scale(1.2)" d="M0 6C-6-4-20 2-17 13c3 9 17 17 17 17s14-8 17-17C20 2 6-4 0 6z" fill="#FF4FA3"/><path transform="translate(60,70) scale(0.8)" d="M0 6C-6-4-20 2-17 13c3 9 17 17 17 17s14-8 17-17C20 2 6-4 0 6z" fill="#E635A0"/><path d="M190 40l4 11 11 4-11 4-4 11-4-11-11-4 11-4z" fill="#2F5BFF"/><path d="M360 110l4 11 11 4-11 4-4 11-4-11-11-4 11-4z" fill="#E635A0"/><text x="24" y="40" font-family="Caveat,cursive" font-size="30" fill="#221722">mi ritual</text></svg><p class="m" style="margin-top:8px"><b>Dirección 03 · Ritual:</b> matcha, skincare, texturas y doodles de corazón y sparkle. El alma de la marca.</p></div></div>
+<p class="note">Ilustraciones originales creadas con la paleta de Hopebeauty como nueva dirección visual. No son las referencias históricas del archivo fuente, que siguen pendientes de incorporar.</p></section>
+
+<!-- 05 CONCEPTO -->
+<section class="s" id="h05"><div class="hd"><b>Dirección creativa</b><span>05</span></div><h2>Concepto visual — Playful Beauty</h2>
+<p class="lead">Dulce, expresiva y femenina, con detalles divertidos: belleza juvenil con estándar editorial.</p>
+<div class="g4">
+<div class="c"><div class="lb">Pilar 01</div><b class="mono">Lienzo pastel</b><p class="m" style="font-size:13px;margin-top:6px">Rosa, marfil y blanco envuelven el contenido.</p></div>
+<div class="c"><div class="lb">Pilar 02</div><b class="mono">Acentos eléctricos</b><p class="m" style="font-size:13px;margin-top:6px">Fucsia y azul saturado en bloques y sellos.</p></div>
+<div class="c"><div class="lb">Pilar 03</div><b class="mono">Script espontáneo</b><p class="m" style="font-size:13px;margin-top:6px">Trazo manuscrito para hooks y guiños.</p></div>
+<div class="c"><div class="lb">Pilar 04</div><b class="mono">Doodles con alma</b><p class="m" style="font-size:13px;margin-top:6px">Corazones, sparkles y onduladas.</p></div></div></section>
+
+<!-- 06 PALETA -->
+<section class="s" id="h06"><div class="hd"><b>Color</b><span>06</span></div><h2>Paleta de colores</h2>
+<div class="pgrid">
+<div class="pc" style="background:#FBDCE9"><div><b>Rosa Pastel</b><code>#FBDCE9</code><br>Fondos, carruseles</div></div>
+<div class="pc" style="background:#FFFFFF"><div><b>Blanco Leche</b><code>#FFFFFF</code><br>Lienzo principal</div></div>
+<div class="pc" style="background:#FAF3EE"><div><b>Marfil</b><code>#FAF3EE</code><br>Fondos editoriales</div></div>
+<div class="pc" style="background:#FF4FA3"><div><b>Rosa Chicle</b><code>#FF4FA3</code><br>Acentos, CTA</div></div>
+<div class="pc" style="background:#E635A0"><div><b>Fucsia</b><code>#E635A0</code><br>Titulares de impacto</div></div>
+<div class="pc" style="background:#2F5BFF"><div><b>Azul Eléctrico</b><code>#2F5BFF</code><br>Bloques y contraste</div></div>
+<div class="pc" style="background:#CDB9EA"><div><b>Lila Suave</b><code>#CDB9EA</code><br>Degradados, apoyo</div></div>
+<div class="pc" style="background:#FFDAC4"><div><b>Melocotón</b><code>#FFDAC4</code><br>Calidez self-care</div></div>
+<div class="pc" style="background:#EDE7EA"><div><b>Gris Ceniza</b><code>#EDE7EA</code><br>Fondos difuminados</div></div>
+<div class="pc" style="background:#D8B25C"><div><b>Dorado Suave</b><code>#D8B25C</code><br>Detalles premium</div></div></div>
+<div class="g2">
+<div class="c"><div class="lb">Combinaciones recomendadas</div><p style="font-size:13px">Rosa Pastel + Fucsia + Blanco · Marfil + Azul Eléctrico + Dorado · Melocotón + Rosa Chicle + Lila · Blanco + Azul Eléctrico (contraste máximo)</p></div>
+<div class="c"><div class="lb">Combinaciones a evitar</div><p style="font-size:13px">Azul Eléctrico + Lila (vibran en conflicto) · Fucsia sobre Melocotón (bajo contraste) · Dorado como fondo pleno (pierde lectura)</p></div></div>
+<div class="c"><div class="lb">La paleta en aplicación</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap">
+<div style="flex:1;min-width:170px;background:#FF4FA3;border-radius:12px;padding:18px;color:var(--ink)"><span class="d" style="font-size:19px">Glow coreano<br>en 3 pasos</span><br><span class="sc2" style="font-size:17px">que sí funcionan</span></div>
+<div style="flex:1;min-width:170px;background:#FAF3EE;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:18px"><span class="d" style="font-size:19px">Rutina AM</span><p class="m" style="margin-top:6px">Etiqueta en mayúsculas en azul eléctrico sobre marfil; texto de apoyo Inter 13 px.</p><span style="font-size:10px;letter-spacing:.3em;color:var(--blue);text-transform:uppercase;font-weight:700">K-Beauty · Nº12</span></div>
+<div style="flex:1;min-width:170px;background:#2F5BFF;border-radius:12px;padding:18px;color:#fff;box-shadow:inset -40px 0 0 #CDB9EA"><span class="sc2" style="font-size:19px">ingredientes explicados</span><br><span class="d" style="font-size:16px">dossier semanal</span></div></div></div>
+<p class="note">Rosa Chicle y Fucsia se usan como fondo con texto oscuro, o con texto blanco solo en tamaños grandes; para texto rosa sobre fondos claros se usa la variante profunda #B03770.</p></section>
+
+<!-- 07 TIPOGRAFÍA -->
+<section class="s" id="h07"><div class="hd"><b>Tipografía</b><span>07</span></div><h2>Banco tipográfico</h2>
+<div class="g3">
+<div class="c"><div class="lb">Titular / Display</div><span class="d" style="font-size:30px">Skincare que trabaja mientras tú descansas</span><p class="m" style="margin-top:10px"><b>Space Grotesk Bold</b> · tracking −2 % · titulares, portadas, nombres de campaña</p></div>
+<div class="c"><div class="lb">Acento manuscrito</div><span class="sc2" style="font-size:32px;color:var(--acc-text)">“glow que se siente”</span><p class="m" style="margin-top:10px"><b>Caveat Medium/Bold</b> · sellos, hooks, subrayados, firmas de reel</p></div>
+<div class="c"><div class="lb">Texto de apoyo</div><p style="font-size:14px;line-height:1.7">Tips rápidos, listas y descripciones en Inter Regular con espaciado generoso para lectura móvil.</p><p class="m" style="margin-top:10px"><b>Inter Regular</b> · 13–15 px · bio, pies de foto, listas</p></div></div>
+<div class="g3">
+<div class="c" style="background:var(--fuc-deep);color:#fff"><div class="lb" style="color:#fff">Etiqueta editorial</div><span style="font-size:11px;letter-spacing:.34em;text-transform:uppercase;font-weight:700">K-Beauty · Review Nº12</span></div>
+<div class="c"><div class="lb">Números oversized</div><span class="mono" style="font-size:92px;line-height:.9;color:var(--acc-text)">05</span><p class="m">Pasos de rutina y conteos, siempre en display bold</p></div>
+<div class="c"><div class="lb">Overlay sobre foto</div><div style="height:150px;border-radius:12px;position:relative;background:linear-gradient(120deg,var(--lila),var(--peach))"><div style="position:absolute;inset:0;border-radius:12px;background:linear-gradient(0deg,rgba(0,0,0,.62) 0%,rgba(0,0,0,.48) 45%,transparent 80%)"></div><span class="d" style="position:absolute;bottom:12px;left:12px;right:12px;color:#fff;font-size:20px;text-shadow:0 2px 12px rgba(0,0,0,.4)">Mi ritual de noche</span></div></div></div></section>
+
+<!-- 08 FIRMA -->
+<section class="s" id="h08"><div class="hd"><b>Identidad</b><span>08</span></div><h2>Firma de marca</h2>
+<div class="g2">
+<div class="c"><div class="lb">Wordmark principal</div><span class="mono" style="font-size:44px;line-height:1">Hope<br><span style="background:var(--acc);padding:0 8px;border-radius:6px">beauty</span></span><p class="m" style="margin-top:10px">Dos líneas; «beauty» puede ir en bloque de color de acento.</p></div>
+<div class="c" style="background:var(--acc)"><div class="lb" style="color:var(--ink)">Monograma</div><span class="mono" style="font-size:70px;color:#fff">HB<span class="sc2" style="font-size:30px">.</span></span><p style="font-size:12px;margin-top:6px">Foto de perfil, marca de agua, favicon y sellos de stories. Es un recurso gráfico, no el identificador interno de la marca.</p></div></div>
+<div class="g3">
+<div class="c"><div class="lb">Firma secundaria</div><span class="sc2" style="font-size:32px;color:var(--acc-text)">hopebeauty</span><p class="m">Portadas de reel y cierres de carrusel</p></div>
+<div class="c"><div class="lb">Marca mínima</div><span style="font-size:11px;letter-spacing:.4em;text-transform:uppercase;font-weight:700">HB · Beauty</span><p class="m">Etiqueta de categoría y sellos</p></div>
+<div class="c"><div class="lb">Marca de agua</div><span class="mono" style="display:inline-block;border:2px solid var(--ink);border-radius:999px;padding:8px 16px;font-size:13px">@hopebeautyyy</span><p class="m">Esquina inferior derecha en fotos de producto, 70 % de opacidad.</p></div></div></section>
+
+<!-- 09 GRÁFICOS -->
+<section class="s" id="h09"><div class="hd"><b>Identidad</b><span>09</span></div><h2>Elementos gráficos</h2>
+<div class="g4">
+<div class="c"><div class="lb">Línea ondulada</div><svg width="120" height="16" viewBox="0 0 120 16" aria-hidden="true"><path d="M2 8Q12 0 22 8T42 8T62 8T82 8T102 8T118 8" fill="none" stroke="#FF4FA3" stroke-width="3" stroke-linecap="round"/></svg><p class="m">Separador y subrayado de hooks</p></div>
+<div class="c"><div class="lb">Sello redondo</div><div style="width:86px;height:86px;border:2.5px dashed var(--acc);border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--acc-text)">100%<br>honest<br>review</div><p class="m">«sin filtro», «testeado», «aprobadísimo»</p></div>
+<div class="c"><div class="lb">Marcador highlight</div><span class="sc2" style="display:inline-block;background:var(--acc);color:var(--ink);font-size:22px;padding:2px 14px;border-radius:4px;transform:rotate(-2deg)">el favorito</span><p class="m">Rotación máx. −3° · uno por slide</p></div>
+<div class="c"><div class="lb">Doodles</div><svg width="90" height="56" viewBox="0 0 90 56" aria-hidden="true"><path d="M15 6l3 10 10 3-10 3-3 10-3-10-10-3 10-3z" fill="#2F5BFF"/><path d="M60 18C50 6 34 14 38 28c3 10 22 20 22 20s19-10 22-20c4-14-12-22-22-10z" fill="#FF4FA3" opacity=".85"/></svg><p class="m">Estrellas, corazones, gotas, píldoras</p></div></div>
+<div class="c"><div class="lb">Patrón de fondo — stories y destacados</div>
+<svg width="100%" height="80" viewBox="0 0 600 80" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><pattern id="pp" width="60" height="60" patternUnits="userSpaceOnUse"><circle cx="12" cy="12" r="3" fill="#FF4FA3" opacity=".5"/><path d="M40 40l4 0M42 38l0 4" stroke="#2F5BFF" stroke-width="2" opacity=".6"/><path d="M10 45q5-6 10 0" stroke="#E635A0" fill="none" stroke-width="2" opacity=".6"/></pattern></defs><rect width="600" height="80" fill="#FBDCE9"/><rect width="600" height="80" fill="url(#pp)"/></svg></div></section>
+
+<!-- 10 FOTOGRAFÍA -->
+<section class="s" id="h10"><div class="hd"><b>Fotografía</b><span>10</span></div><h2>Dirección de fotografía</h2>
+<p class="lead">Luz suave y difusa, fondos limpios de la paleta y un grading cálido con acentos de la identidad: belleza cercana, cuidada y con guiños doodle.</p>
+<div class="g3">
+<div class="c"><div class="lb">Beauty / skincare</div><p style="font-size:13px;line-height:1.6">Primer plano de piel real, texturas (mascarillas, sérum), luz de ventana, fondos rosa o marfil. Grading rosado cálido.</p></div>
+<div class="c"><div class="lb">Self-care</div><p style="font-size:13px;line-height:1.6">Rituales lentos en casa: toallas, vapor, matcha, manos y gestos. Composición tranquila con un solo acento de color.</p></div>
+<div class="c"><div class="lb">Producto y flat-lay</div><p style="font-size:13px;line-height:1.6">Fondo liso de la paleta, overlays doodle integrados y una sola fuente de luz. El producto siempre legible.</p></div></div></section>
+
+<!-- 11 LAYOUT -->
+<section class="s" id="h11"><div class="hd"><b>Layout</b><span>11</span></div><h2>Sistema de composición</h2>
+<div class="g3">
+<div class="c"><div class="lb">Regla 01</div><b>Márgenes</b><p class="m" style="font-size:13px;margin-top:4px">8 % laterales mínimos; contenido crítico dentro del 80 % central.</p></div>
+<div class="c"><div class="lb">Regla 02</div><b>Grilla</b><p class="m" style="font-size:13px;margin-top:4px">Bloques A (foto dominante) y B (tipo dominante) alternados.</p></div>
+<div class="c"><div class="lb">Regla 03</div><b>Jerarquía</b><p class="m" style="font-size:13px;margin-top:4px">Hook de 6 palabras como máximo → dato → CTA. Un solo script por diseño.</p></div>
+<div class="c"><div class="lb">Regla 04</div><b>Aire</b><p class="m" style="font-size:13px;margin-top:4px">Mínimo 20 % de espacio en blanco; máximo 2 acentos simultáneos.</p></div>
+<div class="c"><div class="lb">Regla 05</div><b>Proporciones</b><p class="m" style="font-size:13px;margin-top:4px">Feed 4:5 · reels y stories 9:16 · flat-lays 1:1.</p></div>
+<div class="c"><div class="lb">Regla 06</div><b>Sello repetido</b><p class="m" style="font-size:13px;margin-top:4px">Ondulada o sello en al menos 6 de cada 9 posts: identidad sin logo.</p></div></div></section>
+
+<!-- 12 PERFIL -->
+<section class="s" id="h12"><div class="hd"><b>Instagram</b><span>12</span></div><h2>El perfil</h2>
+<div class="g2">
+<div style="width:100%;max-width:330px;margin:0 auto;border:9px solid var(--ink);border-radius:42px;overflow:hidden;background:#fff" role="img" aria-label="Maqueta de perfil de Instagram de Hopebeauty">
+<div style="padding:16px 14px 20px">
+<div style="display:flex;align-items:center;gap:12px">
+<div style="width:70px;height:70px;flex-shrink:0;border-radius:50%;background:radial-gradient(circle at 30% 30%,#CDB9EA,#FF4FA3);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',Arial,sans-serif;font-weight:700;color:var(--ink);font-size:24px;border:3px solid var(--acc)">HB</div>
+<div style="display:flex;flex:1;justify-content:space-around;text-align:center;font-size:12px"><div><b>—</b><br><span class="m" style="font-size:10px">posts</span></div><div><b>—</b><br><span class="m" style="font-size:10px">seguidores</span></div><div><b>—</b><br><span class="m" style="font-size:10px">siguiendo</span></div></div></div>
+<div style="margin-top:10px;font-size:12.5px;line-height:1.5"><b>Hope Beauty</b> <span class="m" style="font-size:12.5px">@hopebeautyyy</span><br>Tienda de belleza<br>
+<span class="sc2" style="font-size:18px;color:var(--acc-text)">belleza, glow y vida real</span><br>🧴 rutinas e ingredientes · ✨ reseñas honestas</div>
+<div style="display:flex;gap:8px;margin-top:10px"><div style="flex:1;background:var(--acc);color:var(--ink);text-align:center;border-radius:8px;padding:7px;font-size:11px;font-weight:700">Seguir</div><div style="flex:1;border:1px solid rgba(0,0,0,.15);text-align:center;border-radius:8px;padding:7px;font-size:11px">Mensaje</div></div>
+<div style="display:flex;gap:8px;margin-top:14px;font-size:10px;color:var(--muted);overflow:hidden">
+<div style="text-align:center"><div style="width:42px;height:42px;border-radius:50%;background:#FBDCE9;border:2px solid var(--acc);margin:0 auto 3px"></div>niacinamida</div>
+<div style="text-align:center"><div style="width:42px;height:42px;border-radius:50%;background:#FFDAC4;border:2px solid var(--acc);margin:0 auto 3px"></div>retinol</div>
+<div style="text-align:center"><div style="width:42px;height:42px;border-radius:50%;background:#CDB9EA;border:2px solid var(--acc);margin:0 auto 3px"></div>AHA/BHA</div>
+<div style="text-align:center"><div style="width:42px;height:42px;border-radius:50%;background:#2F5BFF;border:2px solid var(--acc);margin:0 auto 3px"></div>rutinas</div>
+<div style="text-align:center"><div style="width:42px;height:42px;border-radius:50%;background:#EDE7EA;border:2px solid var(--acc);margin:0 auto 3px"></div>envíos</div></div>
+</div></div>
+<div class="c"><div class="lb">Arquitectura del perfil</div>
+<p style="font-size:14px;line-height:1.8"><b>Foto:</b> monograma HB en gradiente de acentos (legible en miniatura).<br><br><b>Cuenta:</b> @hopebeautyyy, nombre visible «Hope Beauty».<br><br><b>Bio:</b> «Tienda de belleza» → territorios con emojis → llamada a la acción hacia el destino que se confirme.<br><br><b>Destacados:</b> los temas que ya usa la cuenta (niacinamida, retinol, AHA/BHA, rutinas, envíos, precios, clientes) con portadas de patrón doodle y anillo rosa chicle.</p>
+<p class="m" style="margin-top:12px">Las métricas se muestran vacías a propósito: se incorporarán solo con datos reales de la cuenta.</p></div></div></section>
+
+<!-- 13 MURO 3x3 -->
+<section class="s" id="h13"><div class="hd"><b>Instagram</b><span>13</span></div><h2>El muro — grid 3×3</h2>
+<div class="muro">
+<div class="ph" style="background:linear-gradient(140deg,#CDB9EA,#FF4FA3)"><div class="ov"></div><span class="sc">glow time</span><span class="t">Mi ritual de noche</span></div>
+<div class="post" style="background:#FAF3EE"><span class="tt">Skincare coreano: lo que SÍ funciona</span><span class="ts" style="color:var(--acc-text)">reseña honesta, sin humo</span></div>
+<div class="post" style="background:#fff"><span class="mono big" style="font-size:52px;line-height:.9;color:var(--acc-text)">05</span><span class="tt" style="margin-top:4px">pasos para tu rutina AM</span><span class="m" style="margin-top:4px;font-size:10px">guarda este post ✨</span></div>
+<div class="ph" style="background:linear-gradient(160deg,#2F5BFF,#CDB9EA)"><div class="ov"></div><span class="sc">texture lover</span><span class="t">Texturas: gel, bálsamo y esencia</span></div>
+<div class="post" style="background:#fff"><span class="tk m">El ingrediente</span><span class="tt" style="margin-top:5px">NIACINAMIDA</span><div style="width:44px;height:3px;background:var(--acc);border-radius:2px;margin-top:8px"></div><span class="m" style="margin-top:6px;font-size:10px">explicada fácil</span></div>
+<div class="ph" style="background:linear-gradient(160deg,#FF4FA3,#FFDAC4)"><div class="ov"></div><span class="sc">self care</span><span class="t">Domingo de matcha y mascarilla</span></div>
+<div class="post" style="background:var(--blue)"><span class="ts" style="font-size:22px;color:#fff">constancia &gt; perfección</span><span class="tt" style="color:#fff;margin-top:6px">tu rutina, cada día</span></div>
+<div class="post" style="background:#FBDCE9"><span class="tt">Protector solar: 3 errores comunes</span><span class="ts" style="color:var(--acc-text)">y cómo evitarlos</span></div>
+<div class="post" style="background:var(--ink)"><span class="tk" style="color:#fff">Hopebeauty</span><span class="tt" style="color:#fff;margin-top:5px">bienvenida a la comunidad 💌</span></div></div>
+<p class="lead" style="text-align:center;max-width:66ch;margin:8px auto 0">Ritmo: foto → tipo → número → foto → sello → self-care → acento → educación → marca. Fondos y layouts en contraste constante; nunca dos formatos idénticos seguidos.</p>
+<p class="note">Titulares de ejemplo para mostrar el sistema visual; no son publicaciones existentes.</p></section>
+
+<!-- 14 DESGLOSE -->
+<section class="s" id="h14"><div class="hd"><b>Instagram</b><span>14</span></div><h2>Desglose post a post</h2>
+<div class="g3">
+<div class="c"><div class="lb">01 · Ritual</div><p style="font-size:12.5px;line-height:1.55"><b>Layout:</b> foto real, overlay display + script rotado.<br><span class="m" style="font-size:12.5px"><b>Objetivo:</b> abrir el muro con calidez y aspiración.</span></p></div>
+<div class="c"><div class="lb">02 · Reseña K-beauty</div><p style="font-size:12.5px;line-height:1.55"><b>Layout:</b> tipo dominante sobre marfil, subtítulo en Caveat.<br><span class="m" style="font-size:12.5px"><b>Objetivo:</b> educación y entretenimiento; alto guardado.</span></p></div>
+<div class="c"><div class="lb">03 · Rutina AM</div><p style="font-size:12.5px;line-height:1.55"><b>Layout:</b> número oversized rosa, apoyo pequeño.<br><span class="m" style="font-size:12.5px"><b>Objetivo:</b> carrusel de pasos, lectura rápida.</span></p></div>
+<div class="c"><div class="lb">04 · Texturas</div><p style="font-size:12.5px;line-height:1.55"><b>Layout:</b> gradiente azul → lila, etiqueta script arriba.<br><span class="m" style="font-size:12.5px"><b>Objetivo:</b> mostrar formatos de producto sin romper la paleta.</span></p></div>
+<div class="c"><div class="lb">05 · Ingrediente</div><p style="font-size:12.5px;line-height:1.55"><b>Layout:</b> etiqueta en mayúsculas + regla de acento sobre blanco.<br><span class="m" style="font-size:12.5px"><b>Objetivo:</b> autoridad editorial, formato reutilizable.</span></p></div>
+<div class="c"><div class="lb">06 · Self-care</div><p style="font-size:12.5px;line-height:1.55"><b>Layout:</b> foto con doodles y degradado cálido.<br><span class="m" style="font-size:12.5px"><b>Objetivo:</b> conexión emocional.</span></p></div>
+<div class="c"><div class="lb">07 · Constancia</div><p style="font-size:12.5px;line-height:1.55"><b>Layout:</b> Caveat grande + display, fondo azul eléctrico.<br><span class="m" style="font-size:12.5px"><b>Objetivo:</b> motivar la rutina diaria sin presión.</span></p></div>
+<div class="c"><div class="lb">08 · Protección solar</div><p style="font-size:12.5px;line-height:1.55"><b>Layout:</b> hook específico en dos líneas sobre rosa pastel.<br><span class="m" style="font-size:12.5px"><b>Objetivo:</b> educación útil y fácil de recordar.</span></p></div>
+<div class="c"><div class="lb">09 · Marca</div><p style="font-size:12.5px;line-height:1.55"><b>Layout:</b> fondo carbón, sellos en mayúsculas, cierre de grid.<br><span class="m" style="font-size:12.5px"><b>Objetivo:</b> ancla de identidad y comunidad.</span></p></div></div></section>
+
+<!-- 15 STORIES / REELS / CARRUSEL -->
+<section class="s" id="h15"><div class="hd"><b>Instagram</b><span>15</span></div><h2>Stories · Reels · Carrusel</h2>
+<div class="row" tabindex="0" role="region" aria-label="Ejemplos de stories y portadas de reels">
+<div><div class="lb">Stories interactivas</div><div class="row">
+<div class="story" style="background:#FBDCE9"><span class="tk m">Encuesta</span><div><span class="d" style="font-size:15px">¿Tu paso nº1?</span><div style="margin-top:8px;background:#fff;border-radius:10px;padding:8px;font-size:11px;text-align:center">Limpiador ✨</div><div style="margin-top:6px;background:#fff;border-radius:10px;padding:8px;font-size:11px;text-align:center">Agua micelar</div></div></div>
+<div class="story" style="background:var(--acc)"><span class="sc2" style="color:var(--ink);font-size:26px;align-self:center;margin-top:90px;transform:rotate(-4deg)">detrás de cámaras</span><span class="tk" style="color:var(--ink)">Nuevo reel 7 pm</span></div>
+<div class="story" style="background:var(--blue)"><span class="tk" style="color:#fff">Unboxing</span><span class="d" style="color:#fff;font-size:15px">K-beauty: qué trae la caja 💌</span></div></div></div>
+<div><div class="lb">Portadas de reels</div><div class="row">
+<div class="reel" style="background:var(--ink)"><span class="tk" style="color:#fff">Reel</span><span class="d" style="color:#fff;font-size:14px;margin-top:4px">3 errores en tu rutina de piel</span><span class="sc2" style="color:var(--pink);font-size:15px;margin-top:3px">y cómo arreglarlos</span></div>
+<div class="reel" style="background:var(--fuc-deep)"><span class="tk" style="color:#fff">Reel</span><span class="d" style="color:#fff;font-size:14px;margin-top:4px">5 sérums: para qué sirve cada uno</span></div></div></div></div>
+<div class="lb">Carrusel educativo — rutina en 5 slides</div>
+<div class="row" tabindex="0" role="region" aria-label="Ejemplo de carrusel en cinco slides">
+<div class="post" style="width:96px;flex-shrink:0;background:#FAF3EE"><span class="d" style="font-size:11px">PASO 1 · Limpieza</span></div>
+<div class="post" style="width:96px;flex-shrink:0;background:var(--acc)"><span class="d" style="font-size:11px;color:var(--ink)">PASO 2 · Tónico</span></div>
+<div class="post" style="width:96px;flex-shrink:0;background:var(--blue)"><span class="d" style="font-size:11px;color:#fff">PASO 3 · Sérum</span></div>
+<div class="post" style="width:96px;flex-shrink:0;background:var(--lila)"><span class="d" style="font-size:11px">PASO 4 · Crema</span></div>
+<div class="post" style="width:96px;flex-shrink:0;background:var(--ink)"><span class="d" style="font-size:11px;color:#fff">GUARDA ESTO ✨</span></div></div>
+<p class="note">Portadas y textos de ejemplo; no describen pruebas ni resultados reales.</p></section>
+
+<!-- 16 CONTENIDOS -->
+<section class="s" id="h16"><div class="hd"><b>Contenido</b><span>16</span></div><h2>Sistema de 10 categorías</h2>
+<div class="g3">
+<div class="c"><div class="lb">01</div><b style="font-size:14px">Reseñas honestas</b><p class="m" style="margin-top:4px">Sello «100% honest review» + nota /10</p></div>
+<div class="c"><div class="lb">02</div><b style="font-size:14px">Educación K-beauty</b><p class="m" style="margin-top:4px">Números oversized por paso</p></div>
+<div class="c"><div class="lb">03</div><b style="font-size:14px">Ingredientes</b><p class="m" style="margin-top:4px">Blanco + etiqueta en mayúsculas</p></div>
+<div class="c"><div class="lb">04</div><b style="font-size:14px">Rutinas AM / PM</b><p class="m" style="margin-top:4px">Carrusel de 4 a 6 slides con regla de acento</p></div>
+<div class="c"><div class="lb">05</div><b style="font-size:14px">Self-care</b><p class="m" style="margin-top:4px">Foto dominante + script</p></div>
+<div class="c"><div class="lb">06</div><b style="font-size:14px">Texturas y formatos</b><p class="m" style="margin-top:4px">Gradiente azul + etiqueta superior</p></div>
+<div class="c"><div class="lb">07</div><b style="font-size:14px">Protección solar</b><p class="m" style="margin-top:4px">Hook en dos líneas sobre rosa pastel</p></div>
+<div class="c"><div class="lb">08</div><b style="font-size:14px">Mitos y errores frecuentes</b><p class="m" style="margin-top:4px">Dos columnas: mito + realidad</p></div>
+<div class="c"><div class="lb">09</div><b style="font-size:14px">Novedades y lanzamientos</b><p class="m" style="margin-top:4px">Flat-lay + sello «nuevo»</p></div>
+<div class="c"><div class="lb">10</div><b style="font-size:14px">Comunidad</b><p class="m" style="margin-top:4px">Preguntas, encuestas y respuestas en stories</p></div></div></section>
+
+<!-- 17 CAMPAÑA 01 -->
+<section class="s" id="h17"><div class="hd"><b>Campañas editoriales</b><span>17</span></div><h2>Campaña 01 — Glow Real</h2>
+<div class="g2">
+<div style="aspect-ratio:4/5;border-radius:18px;background:#FBDCE9;padding:26px;display:flex;flex-direction:column;justify-content:space-between">
+<span class="tk" style="color:var(--acc-text);font-weight:700">Campaña · 14 días</span>
+<div><span class="d" style="font-size:30px">Piel real,<br>sin filtros</span><br><span class="sc2" style="font-size:23px;color:var(--acc-text);margin-top:6px">14 días con niacinamida</span></div>
+<span class="tk m">Foto: piel sin filtro · luz de ventana</span></div>
+<div class="c"><div class="lb">Concepto</div><p style="font-size:13px;line-height:1.7">Diario visual de 14 días: misma luz, mismo ángulo, cero retoque. El sello «sin filtro» rotado −2° aparece en cada pieza.<br><br><b>Aplicación:</b> carrusel día 1 frente a día 14 · reel timelapse · stories con encuesta «¿ya la probaste?» · hashtag en Caveat <span class="sc2" style="color:var(--acc-text);font-size:17px">#GlowReal</span> (sujeto a disponibilidad).</p></div></div></section>
+
+<!-- 18 CAMPAÑA 02 -->
+<section class="s" id="h18"><div class="hd"><b>Campañas editoriales</b><span>18</span></div><h2>Campaña 02 — Seúl en mi baño</h2>
+<div class="g2">
+<div style="aspect-ratio:4/5;border-radius:18px;background:#fff;border:2px solid var(--blue);padding:26px;display:flex;flex-direction:column;justify-content:space-between">
+<span class="tk" style="color:var(--blue);font-weight:700">Campaña · Esencialismo</span>
+<div><span class="d" style="font-size:30px">K-beauty<br>sin humo</span><br><span class="sc2" style="font-size:23px;color:var(--acc-text);margin-top:6px">lo esencial y lo prescindible</span></div>
+<span class="tk m">Flat-lay rosa pastel · acentos azul</span></div>
+<div class="c"><div class="lb">Concepto</div><p style="font-size:13px;line-height:1.7">Rutina coreana reducida a 5 pasos reales. Flat-lays ordenados sobre rosa pastel con bloques azul eléctrico, numeración oversized y regla de acento.<br><br><b>Aplicación:</b> carrusel de 6 slides «compra / salta» · reel comparativo · stories con quiz de ingredientes.</p></div></div></section>
+
+<!-- 19 CAMPAÑA 03 -->
+<section class="s" id="h19"><div class="hd"><b>Campañas editoriales</b><span>19</span></div><h2>Campaña 03 — Texturas que enamoran</h2>
+<div class="g2">
+<div style="aspect-ratio:4/5;border-radius:18px;background:var(--blue);padding:26px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden">
+<svg style="position:absolute;right:-30px;bottom:-30px" width="180" height="180" viewBox="0 0 180 180" aria-hidden="true"><circle cx="90" cy="90" r="90" fill="#CDB9EA"/></svg>
+<span class="tk" style="color:#fff;font-weight:700;position:relative">Campaña · Reseñas</span>
+<div style="position:relative"><span class="d" style="font-size:30px;color:#fff">Texturas que<br>enamoran</span><br><span class="sc2" style="font-size:23px;color:#fff;margin-top:6px">reseña honesta · nota /10</span></div>
+<span class="tk" style="color:#fff;position:relative">Grading cálido · doodles integrados</span></div>
+<div class="c"><div class="lb">Concepto</div><p style="font-size:13px;line-height:1.7">Gel, bálsamo, esencia, crema: cada textura con su ficha visual. Nota /10 en display y sparkles doodle sobre las fotos de producto.<br><br><b>Aplicación:</b> reels «me lo quedo / lo dejo» · carrusel con el top 5 del mes · stories con preguntas · destacado «texturas» con patrón doodle.</p></div></div></section>
+
+<!-- 20 WEB -->
+<section class="s" id="h20"><div class="hd"><b>Web</b><span>20</span></div><h2>Página web de la marca</h2>
+<div class="browser" role="img" aria-label="Maqueta de la página web de Hopebeauty">
+<div style="background:var(--ink);padding:8px 14px;display:flex;gap:6px;align-items:center"><span style="width:9px;height:9px;border-radius:50%;background:#ff5f57"></span><span style="width:9px;height:9px;border-radius:50%;background:#febc2e"></span><span style="width:9px;height:9px;border-radius:50%;background:#28c840"></span><span style="margin-left:12px;font-size:10px;color:#fff">dominio por confirmar</span></div>
+<div style="background:#FAF3EE">
+<div class="webnav" style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 22px"><b class="mono">Hope<span style="color:var(--acc-text)">beauty</span></b>
+<div style="display:flex;gap:14px;flex-wrap:wrap;font-size:10px;letter-spacing:.12em;text-transform:uppercase"><span>Inicio</span><span>Rutinas</span><span>Reseñas</span><span>Ingredientes</span><span style="background:var(--acc);color:var(--ink);padding:5px 12px;border-radius:999px;font-weight:700">Contacto</span></div></div>
+<div class="webhero">
+<div><span class="sc2" style="color:var(--acc-text);font-size:20px">belleza honesta · skincare</span>
+<div class="d" style="font-size:clamp(20px,3vw,34px);margin-top:6px">Skincare y K-beauty explicados con honestidad</div>
+<p class="m" style="margin:10px 0 14px">Rutinas, ingredientes y reseñas para cuidar tu piel sin humo.</p>
+<span style="display:inline-block;background:var(--ink);color:#fff;padding:10px 20px;border-radius:999px;font-size:11px;font-weight:600">Ver rutinas →</span></div>
+<div style="aspect-ratio:4/5;border-radius:14px;background:linear-gradient(150deg,#FF4FA3,#CDB9EA);display:flex;align-items:flex-end;padding:14px"><span style="background:rgba(255,255,255,.94);border-radius:8px;padding:6px 10px;font-size:12px;font-weight:600;color:var(--ink)">Imagen principal · pendiente</span></div></div>
+<div class="webcards">
+<div class="c"><b style="font-size:13px">Rutinas</b><p class="m" style="font-size:11px;margin-top:4px">AM y PM, paso a paso</p></div>
+<div class="c"><b style="font-size:13px">Ingredientes</b><p class="m" style="font-size:11px;margin-top:4px">Glosario claro y sin jerga</p></div>
+<div class="c"><b style="font-size:13px">Reseñas</b><p class="m" style="font-size:11px;margin-top:4px">Valoraciones honestas con nota /10</p></div></div>
+<div style="background:var(--ink);color:#fff;text-align:center;padding:12px;font-size:10px;letter-spacing:.25em;text-transform:uppercase">© Hopebeauty</div></div></div>
+<p class="note">Vista conceptual: el dominio, los enlaces y la imagen principal se completarán con datos reales.</p></section>
+
+<!-- 21 PLATAFORMAS -->
+<section class="s" id="h21"><div class="hd"><b>Plataformas</b><span>21</span></div><h2>Identidad fuera de Instagram</h2>
+<div class="g3">
+<div class="c"><div class="lb">TikTok</div><p style="font-size:13px">Perfil con monograma HB y bio en script: <span class="sc2" style="color:var(--acc-text);font-size:18px">«glow y vida real»</span>. Portadas 9:16: hook display + sello.</p></div>
+<div class="c"><div class="lb">YouTube</div><p style="font-size:13px">Miniaturas con fondo de paleta, titular bold de 4 palabras como máximo, acento manuscrito opcional. Banner con wordmark + ondulada.</p></div>
+<div class="c"><div class="lb">Destacados de Instagram</div><p style="font-size:13px">Portadas con patrón doodle, anillo rosa chicle y etiquetas breves: skincare, rutinas, reseñas, self-care.</p></div>
+<div class="c"><div class="lb">Newsletter</div><p style="font-size:13px">Cabecera con wordmark y ondulada rosa, si la marca activa este canal.</p></div>
+<div class="c"><div class="lb">Packaging y etiquetas</div><p style="font-size:13px">Sello redondo, paleta pastel y numeración oversized, si la marca lanza producto propio.</p></div>
+<div class="c"><div class="lb">Tarjeta digital</div><p style="font-size:13px">QR + monograma HB; reverso con la marca mínima «HB · Beauty».</p></div></div></section>
+
+<!-- 22 MANUAL -->
+<section class="s" id="h22"><div class="hd"><b>Manual de marca</b><span>22</span></div><h2>Aplicación correcta e incorrecta</h2>
+<div class="g2">
+<div><div class="lb">Hacer</div>
+<div class="c" style="border-left:4px solid #2E9E6B;margin-bottom:10px"><p style="font-size:13px"><b>✓</b> Un solo acento manuscrito por diseño <span class="m">— rotación máx. −3°</span></p></div>
+<div class="c" style="border-left:4px solid #2E9E6B;margin-bottom:10px"><p style="font-size:13px"><b>✓</b> Titular oscuro sobre fondos pastel <span class="m">— legible en móvil</span></p></div>
+<div class="c" style="border-left:4px solid #2E9E6B;margin-bottom:10px"><p style="font-size:13px"><b>✓</b> Alternar bloques foto / tipo en el muro <span class="m">— ritmo editorial</span></p></div>
+<div class="c" style="border-left:4px solid #2E9E6B"><p style="font-size:13px"><b>✓</b> Marca de agua Hopebeauty en fotos de producto <span class="m">— protección sutil</span></p></div></div>
+<div><div class="lb">No hacer</div>
+<div class="c" style="border-left:4px solid #E05252;margin-bottom:10px"><p style="font-size:13px"><b>✕</b> Azul eléctrico + lila juntos en primer plano <span class="m">— acentos en conflicto</span></p></div>
+<div class="c" style="border-left:4px solid #E05252;margin-bottom:10px"><p style="font-size:13px"><b>✕</b> Más de 2 acentos por slide <span class="m">— ruido visual</span></p></div>
+<div class="c" style="border-left:4px solid #E05252;margin-bottom:10px"><p style="font-size:13px"><b>✕</b> Script en textos largos <span class="m">— es acento, no cuerpo</span></p></div>
+<div class="c" style="border-left:4px solid #E05252"><p style="font-size:13px"><b>✕</b> Texto blanco pequeño sobre rosa chicle <span class="m">— usar tinta o la variante profunda</span></p></div></div></div></section>
+
+<!-- 23 CIERRE -->
+<section class="s end" id="h23"><span class="tag" style="align-self:center">Gracias</span>
+<h2 style="font-size:clamp(32px,5vw,60px);max-width:18ch">Una identidad lista para dar el siguiente paso.</h2>
+<p class="lead" style="text-align:center;max-width:56ch">Identidad visual, sistema de contenidos y aplicaciones de Hopebeauty. Antes de publicar se incorporarán el dominio, las fotografías propias, las imágenes de referencia y los enlaces verificados.<br><b>Hopebeauty · Opción A · Playful Beauty</b></p></section>
+</main>
+</body></html>
